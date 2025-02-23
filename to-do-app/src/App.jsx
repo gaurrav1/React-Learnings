@@ -7,7 +7,9 @@ function App() {
   const [name, setName] = useState('');
   const [tasks, setTasks] = useState([]);
 
-  function addTask() {
+  function addTask(e) {
+    e.preventDefault();
+
     if (name === '') {
       return;
     }
@@ -38,9 +40,11 @@ function App() {
 
   return (
     <>
-      <input value={name} onChange={e => setName(e.target.value)} />
-      <br />
-      <button onClick={addTask}>Add Task</button>
+      <form onSubmit={addTask}>
+        <input value={name} onChange={e => setName(e.target.value)} />
+        <br />
+        <button>Add Task</button>
+      </form>
       <hr />
       
       <ul>
