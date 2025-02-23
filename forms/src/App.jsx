@@ -1,11 +1,9 @@
-import RefForm from "./components/form-validation-project/RefForm"
-import StateForm from "./components/form-validation-project/StateForm"
+import HookForm from "./react-hook-form/HookForm"
 
 function App() {
   return (
     <>
-      <StateForm />
-      {/* <RefForm />  */}
+      <HookForm />
     </>
   )
 }
